@@ -1,0 +1,15 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+/* card */
+
+.rb-card {
+  height: 100px;
+  width: 200px;
+  background-color: aquamarine;
+  border: 2px solid black;
+  
+}
