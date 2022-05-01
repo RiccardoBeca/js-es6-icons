@@ -5,7 +5,9 @@
 // Ciascuna icona ha una proprietà “color”: utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
 // **Milestone 3**
 // Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone *(animal, vegetable, user)*. Quando l’utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
-[
+
+let listaOggetti = [
+
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -119,3 +121,20 @@
 		color: 'blue'
 	}
 ];
+
+
+listaOggetti.forEach(chiaveSingola => {
+
+ const {name, prefix, type, family, color } = chiaveSingola;
+ 
+ document.querySelector("main .container").innerHTML = `
+ 
+ <div class="row row-cols-1 m-3">
+        <div class="col text-center rb-card">
+          <i class="fa-solid fa-cat"></i>
+          <p>cat</p>
+        </div>
+      </div>
+ `
+
+})
