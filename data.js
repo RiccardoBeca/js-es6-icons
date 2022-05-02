@@ -6,6 +6,8 @@
 // **Milestone 3**
 // Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone *(animal, vegetable, user)*. Quando l’utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
 
+
+// global
 let listaOggetti = [
 
 	{
@@ -122,20 +124,49 @@ let listaOggetti = [
 	}
 ];
 
+const scelta = document.getElementById("sceltaCategorie");
+// *********
 
-listaOggetti.forEach(elemento => {
+
+// utils functions
+function printCard(){listaOggetti.forEach(elemento => {
 	
-	const {name, prefix, type, family, color } = elemento;
+	const {name, prefix, family, color } = elemento;
 	
-	document.querySelector("main .container").innerHTML = `
+	document.querySelector("main .container").innerHTML += `
 	
 	<div class="row row-cols-1 m-3">
 	<div class="col text-center rb-card">
-	<i class="${elemento[family]} ${elemento[prefix]} ${elemento[name]}" style="color:${color}"></i>
-	<p>${elemento[name]}</p>
+	<i class="${family} ${prefix}${name}" style="color:${color}"></i>
+	<p>${name}</p>
 	</div>
 	</div>
 	`
 	
-	console.log(elemento.prefix, elemento.name, elemento.color);
 })
+}
+
+// const tipoCarta = listaOggetti.filter((elemento) => {
+// 	elemento.type
+// })
+
+function cambiaCarte() {
+	listaOggetti.forEach(element => {
+		
+		if(this.value === element.type) {
+			
+		}
+	})
+	}
+
+// ****************
+
+
+
+
+
+// init
+printCard();
+
+scelta.addEventListener("change", cambiaCarte);
+

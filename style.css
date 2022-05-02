@@ -9,7 +9,6 @@ body {
 .rb-card {
   height: 100px;
   width: 200px;
-  background-color: aquamarine;
-  border: 2px solid black;
-  
+  background-color: lightgray;
+  border-radius: 10px;
 }
