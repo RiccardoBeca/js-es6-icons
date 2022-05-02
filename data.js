@@ -123,18 +123,19 @@ let listaOggetti = [
 ];
 
 
-listaOggetti.forEach(chiaveSingola => {
-
- const {name, prefix, type, family, color } = chiaveSingola;
- 
- document.querySelector("main .container").innerHTML = `
- 
- <div class="row row-cols-1 m-3">
-        <div class="col text-center rb-card">
-          <i class="fa-solid fa-cat"></i>
-          <p>cat</p>
-        </div>
-      </div>
- `
-
+listaOggetti.forEach(elemento => {
+	
+	const {name, prefix, type, family, color } = elemento;
+	
+	document.querySelector("main .container").innerHTML = `
+	
+	<div class="row row-cols-1 m-3">
+	<div class="col text-center rb-card">
+	<i class="${elemento[family]} ${elemento[prefix]} ${elemento[name]}" style="color:${color}"></i>
+	<p>${elemento[name]}</p>
+	</div>
+	</div>
+	`
+	
+	console.log(elemento.prefix, elemento.name, elemento.color);
 })
